@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS nearhub;
+CREATE DATABASE nearhub;
+USE nearhub;
