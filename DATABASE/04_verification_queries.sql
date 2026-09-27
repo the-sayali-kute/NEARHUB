@@ -8,15 +8,25 @@ SELECT * FROM mess_owner;
 SELECT * FROM admin;
 SELECT * FROM hostel;
 SELECT * FROM room;
+DESC room;
 SELECT * FROM facility;
 SELECT * FROM hostel_facility;
 SELECT * FROM mess;
+DESC mess;
 SELECT * FROM menu;
+
+DESCRIBE menu;
 SELECT * FROM meal_plan;
+desc meal_plan;
 SELECT * FROM room_booking;
+desc room_booking;
+
 SELECT * FROM meal_subscription;
+desc meal_subscription;
+
 SELECT * FROM payment;
-SELECT * FROM feedback;  
+SELECT * FROM feedback;
+desc feedback;  
 SELECT * FROM student_preference;
 
 SELECT
@@ -61,6 +71,16 @@ JOIN room r
 ON rb.room_id = r.room_id
 JOIN hostel h
 ON r.hostel_id = h.hostel_id;
+
+use nearhub;
+SELECT
+    room_id,
+    room_number,
+    capacity,
+    available_beds,
+    status
+FROM room
+WHERE room_id = 1;
 
 SELECT
     s.name AS student_name,

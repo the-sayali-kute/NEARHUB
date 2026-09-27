@@ -17,6 +17,7 @@ CREATE TABLE student (
 
 CREATE TABLE hostel_owner (
     hostel_owner_id INT AUTO_INCREMENT PRIMARY KEY,
+    hostel_owner_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     phone VARCHAR(15) NOT NULL UNIQUE,
@@ -59,6 +60,8 @@ CREATE TABLE hostel (
         ON UPDATE CASCADE
         ON DELETE RESTRICT
 );
+ALTER TABLE hostel
+MODIFY gender_type ENUM('Male', 'Female', 'Both') NOT NULL;
 
 CREATE TABLE room (
     room_id INT AUTO_INCREMENT PRIMARY KEY,
